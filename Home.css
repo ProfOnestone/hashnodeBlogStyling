@@ -23,13 +23,12 @@
     --VerticalLine:yellowGreen;
 }
 
-
 .blog-body
 {
     background-image: repeating-linear-gradient(
     var(--Background),
-    var(--Background) 1.5rem,
-    var(--Lines) 1.555rem var(--CommonHeight)
+    var(--Background) 1.7rem,
+    var(--Lines) 1.755rem var(--CommonHeight)
     ) !important;
 }
 @media (min-width: 820px){
@@ -55,11 +54,11 @@
 }
 
 .blog-title{
-    line-height:var(--CommonHeight);
+    line-height:var(--CommonHeight)!important;
 }
 
 .blog-posts-wrapper{
-    margin-top:1.8rem!important;
+    margin-top:1.5rem!important;
 }
 
 .blog-post-card-wrapper{
@@ -69,7 +68,7 @@
 .blog-post-card{
     padding:var(--CommonHeight);
     background:var(--Card);
-    border-radius:vat(--HalfHeight);
+    border-radius:var(--HalfHeight);
     margin-bottom:var(--CommonHeight)!important;
 }
 
@@ -80,11 +79,14 @@
 .blog-post-card-title{
     line-height:var(--DoubleHeight)!important;
     margin-bottom:0rem!important;
+    background: var(--Background);
+    text-align: center;
+    
 }
-
 .blog-post-card-meta{
     line-height:var(--CommonHeight)!important;
     margin-bottom:var(--CommonHeight)!important;
+    
 }
 
 .blog-post-card-brief{
