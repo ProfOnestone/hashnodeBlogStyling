@@ -1,0 +1,105 @@
+:root{
+    
+    --HeaderTop:#734610;
+    --HeaderBottom:#A67233;
+    --Background:#F0F0F0;
+    --Lines:#734610;
+    --VerticalLine:#D70000;
+
+    --Card:rgb(240,240,240,0.9);    
+    --HalfHeight: 0.8rem;
+    --CommonHeight: 1.6rem;
+    --DoubleHeight: 3.2rem;
+    --QuadHeight:6.4rem;
+}
+
+
+.dark{
+    --HeaderTop:#030303;
+    --HeaderBottom:#363636;
+    --Background:#202020;
+    --Lines:#D9D9D9;
+    --Card:rgb(89,89,89,0.9);
+    --VerticalLine:yellowGreen;
+}
+
+
+.blog-body
+{
+    background-image: repeating-linear-gradient(
+    var(--Background),
+    var(--Background) 1.5rem,
+    var(--Lines) 1.555rem var(--CommonHeight)
+    ) !important;
+}
+@media (min-width: 820px){
+    
+.blog-body:after{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:10%;
+    height:100%;
+    border-right:2px solid var(--VerticalLine)!important;
+    display:block!important;
+}
+
+}
+
+.blog-header
+{
+    background-image: linear-gradient(var(--HeaderTop),
+    var(--HeaderBottom));
+    border-bottom: solid black 1px;
+}
+
+.blog-title{
+    line-height:var(--CommonHeight);
+}
+
+.blog-posts-wrapper{
+    margin-top:1.8rem!important;
+}
+
+.blog-post-card-wrapper{
+    animation: show 1s ease-in;
+}
+
+.blog-post-card{
+    padding:var(--CommonHeight);
+    background:var(--Card);
+    border-radius:vat(--HalfHeight);
+    margin-bottom:var(--CommonHeight)!important;
+}
+
+.blog-post-card:hover{
+    filter: drop-shadow(0 0 0.2rem white)!important;
+}
+
+.blog-post-card-title{
+    line-height:var(--DoubleHeight)!important;
+    margin-bottom:0rem!important;
+}
+
+.blog-post-card-meta{
+    line-height:var(--CommonHeight)!important;
+    margin-bottom:var(--CommonHeight)!important;
+}
+
+.blog-post-card-brief{
+    line-height: var(--CommonHeight)!important;
+}
+
+.blog-footer-area{
+    border:0;
+    padding-top:0!important;
+    margin-top: var(--QuadHeight) !important;
+    line-height:var(--CommonHeight)!important;
+    background:var(--Background)!important;
+}
+
+@keyframes show {
+    from{opacity:0;}
+    to {opacity:1;}
+}
